@@ -9,7 +9,7 @@ project reference tracking
 
 **Ai Engineering (LLM,ML,RL)   **
 
-***LLM***
+*LLM*
 - https://github.com/karost2790/DeepSeek-R1
 - https://github.com/karost2790/train-deepseek-r1
 - https://github.com/karost2790/verl
