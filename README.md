@@ -5,7 +5,7 @@ project reference tracking
 - https://github.com/karost2790/AutoGPT
 - https://github.com/karost2790/autogen
 
-**DeepLearning**
+**Ai Engineering**
 - https://github.com/karost2790/DeepSeek-R1
 - https://github.com/karost2790/train-deepseek-r1
 - https://github.com/karost2790/verl
