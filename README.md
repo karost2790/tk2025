@@ -7,7 +7,7 @@ project reference tracking
 - https://github.com/karost2790/AutoGPT
 - https://github.com/karost2790/autogen
 
-**Ai Engineering (LLM,ML,RL)   **
+**Ai Engineering (LLM,ML,RL)**
 
 *LLM*
 - https://github.com/karost2790/DeepSeek-R1
