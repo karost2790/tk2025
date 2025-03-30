@@ -8,6 +8,8 @@
 - https://github.com/karost2790/autogen
 
 **Ai Engineering (LLM,ML,RL)**
+*Revers Engineer*
+- https://github.com/karost2790/Integuru
 
 *LLM*
 - https://github.com/karost2790/DeepSeek-R1
