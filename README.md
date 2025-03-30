@@ -1,11 +1,15 @@
 # tk2025
 project reference tracking
-
+**Ai SWE Architecture**
+- https://github.com/karost2790/SWELancer-Benchmark
+- 
 **Ai Agents**
 - https://github.com/karost2790/AutoGPT
 - https://github.com/karost2790/autogen
 
-**Ai Engineering**
+**Ai Engineering (LLM,ML,RL)   **
+
+***LLM***
 - https://github.com/karost2790/DeepSeek-R1
 - https://github.com/karost2790/train-deepseek-r1
 - https://github.com/karost2790/verl
