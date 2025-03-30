@@ -1,9 +1,6 @@
 # tk2025
 project reference tracking
 
-**outlier.ai**
-- https://github.com/karost2790/Awesome-LLM4Math
-
 
 **DeepLearning**
 - https://github.com/karost2790/DeepSeek-R1
