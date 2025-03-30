@@ -29,3 +29,6 @@
 **App Framework**
 - https://github.com/karost2790/BroadleafCommerce
 - https://github.com/karost2790/yas
+
+**MCP**
+- https://github.com/karost2790/mcp-agent
