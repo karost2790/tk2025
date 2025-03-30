@@ -3,6 +3,7 @@ project reference tracking
 
 **Ai Agents**
 - https://github.com/karost2790/AutoGPT
+- https://github.com/karost2790/autogen
 
 **DeepLearning**
 - https://github.com/karost2790/DeepSeek-R1
