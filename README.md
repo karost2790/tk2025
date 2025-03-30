@@ -12,6 +12,7 @@ project reference tracking
 
 
 **Software Architecture**
+- https://github.com/karost2790/generator-jhipster
 - https://github.com/karost2790/microservices-sample
 - https://github.com/karost2790/go-clean-template
 
