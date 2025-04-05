@@ -32,3 +32,10 @@
 
 **MCP**
 - https://github.com/karost2790/mcp-agent
+
+
+**OpenManu**
+- https://github.com/mannaandpoem/OpenManus
+- https://github.com/Shybert-AI/OpenManus-WebUI
+- https://medium.com/@cch.chichieh/openmanus-tutorial-how-to-build-your-custom-ai-agent-in-2025-beginners-guide-a3476af62056
+- https://dev.to/nodeshiftcloud/how-to-install-run-openmanus-locally-with-ollama-no-api-keys-required-2o4i
