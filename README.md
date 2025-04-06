@@ -9,7 +9,7 @@
 
 **Ai Engineering (LLM,ML,RL)**
 
-*Revers Engineer*
+*Rrevesrs Engineer*
 - https://github.com/karost2790/Integuru
 
 *LLM*
@@ -37,6 +37,7 @@
 **RAG**
 - https://www.youtube.com/watch?v=vX3A96_F3FU
 - https://www.youtube.com/watch?v=oageL-1I0GE
+- https://www.youtube.com/watch?v=Hj7PuK1bMZU
 
 **OpenManu**
 - https://github.com/mannaandpoem/OpenManus
