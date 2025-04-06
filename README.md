@@ -25,6 +25,7 @@
 
 **Front-End Testing**
 - https://github.com/karost2790/browser-use
+- https://www.youtube.com/watch?v=DTGRIaAJYIo
 
 **App Framework**
 - https://github.com/karost2790/BroadleafCommerce
@@ -33,6 +34,9 @@
 **MCP**
 - https://github.com/karost2790/mcp-agent
 
+**RAG**
+- https://www.youtube.com/watch?v=vX3A96_F3FU
+- https://www.youtube.com/watch?v=oageL-1I0GE
 
 **OpenManu**
 - https://github.com/mannaandpoem/OpenManus
