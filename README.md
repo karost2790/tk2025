@@ -35,6 +35,7 @@
 - https://github.com/karost2790/mcp-agent
 
 **RAG**
+- https://github.com/karost2790/llama_index
 - https://www.youtube.com/watch?v=vX3A96_F3FU
 - https://www.youtube.com/watch?v=oageL-1I0GE
 - https://www.youtube.com/watch?v=Hj7PuK1bMZU
