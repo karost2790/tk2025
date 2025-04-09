@@ -48,3 +48,4 @@
 **Multi-Web-Serach**
 - https://github.com/karost2790/Perplexica
 - https://github.com/karost2790/searxng
+- https://github.com/karost2790/searxng-docker
