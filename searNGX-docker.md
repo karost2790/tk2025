@@ -141,7 +141,81 @@ git clone https://github.com/searxng/searxng-docker.git .
     caddy-config:
     redis-data:
   ```
+### 4.Config Caddyfile 
+- Open Caddyfile and replace with this:
+  ```js
+  {
+    admin off
+    log {
+        output stderr
+        format filter {
+            request>remote_ip ip_mask 8 32
+            request>client_ip ip_mask 8 32
+            request>remote_port delete
+            request>headers delete
+            request>uri query {
+                delete url
+                delete h
+                delete q
+            }
+        }
+    }
+  }
+  :8081
+    encode zstd gzip
+	log {
+        output stderr
+        format json
+    }
+	respond "Hello, Caddy!"
+    @api {
+        path /config
+        path /healthz
+        path /stats/errors
+        path /stats/checker
+    }
+    @search {
+        path /search
+    }
+    @imageproxy {
+        path /image_proxy
+    }
+    @static {
+        path /static/*
+    }
+    header {
+        Content-Security-Policy "default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; form-action 'self' https://github.com/searxng/searxng/issues/new; font-src 'self'; frame-ancestors 'self'; base-uri 'self'; connect-src 'self' https://overpass-api.de; img-src * data:; frame-src https://www.youtube-nocookie.com https://player.vimeo.com https://www.dailymotion.com https://www.deezer.com https://www.mixcloud.com https://w.soundcloud.com https://embed.spotify.com;"
+        Permissions-Policy "accelerometer=(),camera=(),geolocation=(),gyroscope=(),magnetometer=(),microphone=(),payment=(),usb=()"
+        Referrer-Policy "no-referrer"
+        X-Content-Type-Options "nosniff"
+        X-Robots-Tag "noindex, noarchive, nofollow"
+        -Server
+    }
+    header @api {
+        Access-Control-Allow-Methods "GET, OPTIONS"
+        Access-Control-Allow-Origin "*"
+    }
+    route {
+        header Cache-Control "max-age=0, no-store"
+        header @search Cache-Control "max-age=5, private"
+        header @imageproxy Cache-Control "max-age=604800, public"
+        header @static Cache-Control "max-age=31536000, public, immutable"
+    }
+    reverse_proxy 127.0.0.1:8080 {
+        header_up X-Forwarded-For {remote_host}
+        header_up X-Forwarded-Port {http.request.port}
+        header_up X-Real-IP {remote_host}
+        header_up Host {host}
+        header_up Connection "close"
+        transport http {
+            read_timeout 10s
+            write_timeout 10s
+            dial_timeout 5s			
+        }
+    }
+  }
 
+  ```
 
 
 
