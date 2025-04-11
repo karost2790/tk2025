@@ -11,11 +11,12 @@
 - Open a Command Prompt, PowerShell, or WSL2 terminal (Ubuntu).
 - Navigate to a directory where you want to store the SearXNG files (e.g., C:\Users\YourUser\SearXNG):
 ```
-cd /mnt/c/Users/YourUser
+# cd /mnt/c/Users/YourUser ## go to windows drive c:\Users\YoursUser
+cd /mnt/f/Ai-Srv
 mkdir SearXNG
 cd SearXNG
-
 ```
+
 
 
 
