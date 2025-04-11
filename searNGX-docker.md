@@ -29,7 +29,41 @@ git clone https://github.com/searxng/searxng-docker.git .
   # then you will key:
   7a4e790126cc826606f619869ce2a471018b1ee15fa1d804210318e0ce9b8762
   ```
+- replace config in settings.yaml:
+  ```
+  # see https://docs.searxng.org/admin/settings/settings.html#settings-use-default-settings
+use_default_settings: true
+server:
+  # base_url is defined in the SEARXNG_BASE_URL environment variable, see .env and docker-compose.yml
+  port: 8080              # Matches your docker-compose.yaml
+  bind_address: "0.0.0.0" # Allows access beyond localhost
+  secret_key: "8c3736901515ea5b5c6bb67dca78cf3df946a1dbf143db60f9811668a8919fc"  # change this!
+  limiter: false  # can be disabled for a private instance
+  public_instance: false   # Enables public API access
+  image_proxy: true
+# Search settings
+search:
+  safe_search: 0          # No filtering, full results
+  autocomplete: ""        # Disable autocomplete for API simplicity
+  default_lang: "en"      # Default language
+  formats:                # Ensure JSON is supported
+    - html
+    - json
+    - rss
+    - csv
+# Outgoing settings (for external sources)
+outgoing:
+  request_timeout: 5.0    # Increase timeout for external fetches
+  pool_connections: 100   # More connections for parallel queries
+  pool_maxsize: 10        # Connection pool size    
+ui:
+  static_use_hash: true
+redis:
+  url: redis://redis:6379/0
 
+
+
+  ```
 
 
 
