@@ -23,7 +23,7 @@ git clone https://github.com/searxng/searxng-docker.git .
 ### 2.Configure SearXNG Settings
 - Inside the searxng-docker directory, locate the searxng/settings.yml file.
 - Generate a secure secret key (best practice for security):
-  In your WSL2 terminal, run:
+  - In your WSL2 terminal, run:
   ```bash
   openssl rand -hex 32
   # then you will key:
@@ -38,7 +38,7 @@ git clone https://github.com/searxng/searxng-docker.git .
   # base_url is defined in the SEARXNG_BASE_URL environment variable, see .env and docker-compose.yml
   port: 8080              # Matches your docker-compose.yaml
   bind_address: "0.0.0.0" # Allows access beyond localhost
-  secret_key: "8c3736901515ea5b5c6bb67dca78cf3df946a1dbf143db60f9811668a8919fc"  # change this!
+  secret_key: "< YOUR NEW KEY >"  # change this!
   limiter: false  # can be disabled for a private instance
   public_instance: false   # Enables public API access
   image_proxy: true
@@ -62,6 +62,13 @@ git clone https://github.com/searxng/searxng-docker.git .
   redis:
     url: redis://redis:6379/0
   ```
+    - Copy the output (e.g., a1b2c3...) and edit settings.yml:
+    ```bash
+    bind_address: "0.0.0.0" # Allows access beyond localhost
+    secret_key: "7a4e790126cc826606f619869ce2a471018b1ee15fa1d804210318e0ce9b8762"  # change this!
+    limiter: false  # can be disabled for a private instance
+    ```
+
 
 
 
