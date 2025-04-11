@@ -16,6 +16,15 @@ cd /mnt/f/Ai-Srv
 mkdir SearXNG
 cd SearXNG
 ```
+- Clone the official SearXNG Docker repository:
+```bash
+git clone https://github.com/searxng/searxng-docker.git .
+```
+### 2.Configure SearXNG Settings
+- Inside the searxng-docker directory, locate the searxng/settings.yml file.
+- Generate a secure secret key (best practice for security):
+-- In your WSL2 terminal, run:
+
 
 
 
