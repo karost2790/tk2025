@@ -23,7 +23,12 @@ git clone https://github.com/searxng/searxng-docker.git .
 ### 2.Configure SearXNG Settings
 - Inside the searxng-docker directory, locate the searxng/settings.yml file.
 - Generate a secure secret key (best practice for security):
--- In your WSL2 terminal, run:
+  In your WSL2 terminal, run:
+  ```bash
+  openssl rand -hex 32
+  # then you will key:
+  7a4e790126cc826606f619869ce2a471018b1ee15fa1d804210318e0ce9b8762
+  ```
 
 
 
