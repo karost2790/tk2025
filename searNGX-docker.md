@@ -240,7 +240,11 @@ docker ps
 ```
 ### 7.Test to use by open browser then input URL:
 ```
+# open browser in windowns host
 http://localhost:8080
+
+# in other machine like mac , ipad, iphone : input ip of windows host:8081
+http://192.168.1.35:8081
 ```
 
 
