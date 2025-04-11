@@ -85,8 +85,8 @@ git clone https://github.com/searxng/searxng-docker.git .
     environment:
       - SEARXNG_HOSTNAME=localhost
       - SEARXNG_TLS=internal
-    #cap_drop:
-      #- ALL
+    cap_drop:
+      - ALL
     cap_add:
       - NET_BIND_SERVICE
     logging:
@@ -94,6 +94,8 @@ git clone https://github.com/searxng/searxng-docker.git .
       options:
         max-size: "1m"
         max-file: "1"
+    networks:
+      - searxng  # Join SearXNG’s network    
   searxng:
     container_name: searxng
     image: docker.io/searxng/searxng:latest
@@ -108,8 +110,8 @@ git clone https://github.com/searxng/searxng-docker.git .
       - SEARXNG_BASE_URL=http://localhost/
       - UWSGI_WORKERS=4
       - UWSGI_THREADS=4
-    cap_drop:
-      - ALL
+    #cap_drop:
+      #- ALL
     cap_add:
       - CHOWN
       - SETGID
@@ -139,7 +141,7 @@ git clone https://github.com/searxng/searxng-docker.git .
   volumes:
     caddy-data:
     caddy-config:
-    redis-data:
+    redis-data:	
   ```
 ### 4.Config Caddyfile 
 - Open Caddyfile and replace with this:
