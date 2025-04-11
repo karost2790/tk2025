@@ -53,3 +53,4 @@
 
 **Test/Production**
 - https://www.youtube.com/watch?v=t779DVjCKCs # docker optimize
+- https://www.youtube.com/watch?v=yJmyYosyDDM # production test
