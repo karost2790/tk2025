@@ -62,13 +62,85 @@ git clone https://github.com/searxng/searxng-docker.git .
   redis:
     url: redis://redis:6379/0
   ```
-    - Copy the output (e.g., a1b2c3...) and edit settings.yml:
+    - Copy the secure secret key into settings.yml-> secret_key:
     ```bash
     bind_address: "0.0.0.0" # Allows access beyond localhost
     secret_key: "7a4e790126cc826606f619869ce2a471018b1ee15fa1d804210318e0ce9b8762"  # change this!
     limiter: false  # can be disabled for a private instance
     ```
-
+### 3.Config docker-compose.yaml file 
+- open docker-compose.yaml and replace with this:
+  ```js
+  services:
+  caddy:
+    container_name: caddy
+    image: docker.io/library/caddy:2-alpine
+    ports:
+      - "8081:8081"
+    restart: unless-stopped
+    volumes:
+      - /mnt/f/Ai-srv/SearXNG/Caddyfile:/etc/caddy/Caddyfile  # Host path : Container path
+      - caddy-data:/data:rw
+      - caddy-config:/config:rw
+    environment:
+      - SEARXNG_HOSTNAME=localhost
+      - SEARXNG_TLS=internal
+    cap_drop:
+      - ALL
+    cap_add:
+      - NET_BIND_SERVICE
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "1m"
+        max-file: "1"
+  searxng:
+    container_name: searxng
+    image: docker.io/searxng/searxng:latest
+    restart: unless-stopped
+    networks:
+      - searxng
+    ports:
+      - "127.0.0.1:8080:8080"
+    volumes:
+      - ./searxng:/etc/searxng:rw
+    environment:
+      - SEARXNG_BASE_URL=http://localhost/
+      - UWSGI_WORKERS=4
+      - UWSGI_THREADS=4
+    cap_drop:
+      - ALL
+    cap_add:
+      - CHOWN
+      - SETGID
+      - SETUID
+    depends_on:
+      - redis
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "1m"
+        max-file: "1"
+  redis:
+    container_name: redis
+    image: redis:7-alpine
+    restart: unless-stopped
+    networks:
+      - searxng
+    volumes:
+      - redis-data:/data
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "1m"
+        max-file: "1"
+  networks:
+    searxng:
+  volumes:
+    caddy-data:
+    caddy-config:
+    redis-data:
+  ```
 
 
 
