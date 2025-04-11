@@ -50,3 +50,6 @@
 - https://github.com/karost2790/Perplexica
 - https://github.com/karost2790/searxng
 - https://github.com/karost2790/searxng-docker
+
+**Test/Production**
+- https://www.youtube.com/watch?v=t779DVjCKCs # docker optimize
