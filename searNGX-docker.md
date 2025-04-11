@@ -85,8 +85,8 @@ git clone https://github.com/searxng/searxng-docker.git .
     environment:
       - SEARXNG_HOSTNAME=localhost
       - SEARXNG_TLS=internal
-    cap_drop:
-      - ALL
+    #cap_drop:
+      #- ALL
     cap_add:
       - NET_BIND_SERVICE
     logging:
@@ -216,6 +216,28 @@ git clone https://github.com/searxng/searxng-docker.git .
   }
 
   ```
+### 5.Start Docker Containers
+- In the searxng-docker directory, run:
+```base
+docker-compose up -d
+```
+### 6.Post-First-Run Security
+- Stop the containers:
+```base
+docker-compose down
+```
+- Re-add cap_drop: - ALL to docker-compose.yaml for enhanced security, then restart by un comment:
+```js
+cap_drop:
+  - ALL
+```
+- Start Docker Containers again
+```bash
+docker-compose up -d
+# docker-compose up -d --force-recreate 
+```
+
+
 
 
 
