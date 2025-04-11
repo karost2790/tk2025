@@ -217,7 +217,7 @@ git clone https://github.com/searxng/searxng-docker.git .
 
   ```
 ### 5.Start Docker Containers
-- In the searxng-docker directory, run:
+- In the searxng-docker directory,( in ubuntu ) run:
 ```base
 docker-compose up -d
 ```
@@ -234,9 +234,13 @@ cap_drop:
 - Start Docker Containers again
 ```bash
 docker-compose up -d
-# docker-compose up -d --force-recreate 
+# docker-compose up -d --force-recreate
+docker ps
 ```
-
+### 7.Test to use by open browser then input URL:
+```
+http://localhost:8080
+```
 
 
 
