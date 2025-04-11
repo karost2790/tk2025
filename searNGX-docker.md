@@ -169,7 +169,6 @@ git clone https://github.com/searxng/searxng-docker.git .
         output stderr
         format json
     }
-	respond "Hello, Caddy!"
     @api {
         path /config
         path /healthz
@@ -202,21 +201,21 @@ git clone https://github.com/searxng/searxng-docker.git .
         header @search Cache-Control "max-age=5, private"
         header @imageproxy Cache-Control "max-age=604800, public"
         header @static Cache-Control "max-age=31536000, public, immutable"
-    }
-    reverse_proxy 127.0.0.1:8080 {
-        header_up X-Forwarded-For {remote_host}
-        header_up X-Forwarded-Port {http.request.port}
-        header_up X-Real-IP {remote_host}
-        header_up Host {host}
-        header_up Connection "close"
-        transport http {
-            read_timeout 10s
-            write_timeout 10s
-            dial_timeout 5s			
+        reverse_proxy searxng:8080 {
+            header_up X-Forwarded-For {remote_host}
+            header_up X-Forwarded-Port {http.request.port}
+            header_up X-Real-IP {remote_host}
+            header_up Host {host}
+            header_up Connection "close"
+            transport http {
+                read_timeout 10s
+                write_timeout 10s
+                dial_timeout 5s			
+            }
+		
         }
-    }
+    }    
   }
-
   ```
 ### 5.Start Docker Containers
 - In the searxng-docker directory,( in ubuntu ) run:
