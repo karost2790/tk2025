@@ -55,6 +55,36 @@
     ```
   - Try again.
 
+## 4. Install and Activate Node.js 20.12.2 LTS
+  - 1.List Available Versions:
+    ```bash
+    nvm list available
+    ```
+    - Find 20.xx.x under LTS.
+  - 2.Install Node.js 20.xx.x
+    ```bash
+    nvm install 20.xx.x
+    ```
+  - 3.Use the version:
+    ```bash
+    nvm use 20.xx.x
+    ```
+  - 4.Set as Default:
+    ```bash
+    nvm alias default 20.xx.x
+    ```
+
+## 5.Verify Node.js and npm
+  ```bash
+  node -v
+  npm -v
+  ```
+
+
+
+
+    
+
 
 
 
