@@ -25,17 +25,38 @@
   - If exists, delete it (already done above).
 
 ## 2.Reinstall nvm-windows
-- Download nvm-windows:
+- 1.Download nvm-windows:
     - Open a browser, go to https://github.com/coreybutler/nvm-windows/releases.
     - Download nvm-setup.exe (e.g., version 1.1.12).
     - Save to F:\Ai-srv.
 
-- Run Installer:
+- 2.Run Installer:
     - Double-click F:\Ai-srv\nvm-setup.exe.
     - Click Next, accept the license.
     - Set nvm install path to C:\nvm4w (to match your preference).
-    - Set Node.js symlink path to C:\Program Files\nodejs.
     - Click Install, then Finish
+
+- 3.Close Command Prompt:
+  ```bash
+  exit
+  ```
+## 3.Verify nvm-windows Installation
+- 1.Open New Command Prompt:
+  - Win + R, cmd, Enter.
+- 2.Check nvm Version:
+  ```bash
+  nvm version
+  ```
+  - Expect: 1.1.12.
+  - If Failed:
+    - Add C:\nvm4w to PATH:
+    ```bash
+    set PATH=%PATH%;C:\nvm4w
+    ```
+  - Try again.
+
+
+
 
 
 
