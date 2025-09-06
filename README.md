@@ -54,3 +54,6 @@
 **Test/Production**
 - https://www.youtube.com/watch?v=t779DVjCKCs # docker optimize
 - https://www.youtube.com/watch?v=yJmyYosyDDM # production test
+
+**OS & HARDWARE**
+- https://github.com/mikeroyal/Debian-Guide?tab=readme-ov-file
